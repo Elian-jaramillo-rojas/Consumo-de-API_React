@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { List } from '../List/List';
-import { Selector } from '../Select/Selector';
 
 export const Home = () => {
 
@@ -42,13 +41,14 @@ export const Home = () => {
     if (value  == -1) {
       setCurrentData(data)
     }else{
-      setCurrentData([data[value -1]])
+      setCurrentData([data[value-1]])
     }
   }
 
 
   return (
     <main>
+     
      <select 
         onChange={e => callback(e.target.value)}>
             <option value="-1">Todos</option>
